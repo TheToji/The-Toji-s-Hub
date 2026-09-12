@@ -1,0 +1,109 @@
+/* Genel Sayfa Ayarları */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ana İçerik Kutusu (Ortadaki Alan) */
+.container {
+    width: 600px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Üst Menü Butonları */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.menu-btn {
+    background-color: #d3d3d3;
+    border: 2px solid #999;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* BAŞARILI SABİT SAĞ MENÜ (İstediğin Özellik) */
+.side-menu {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.side-btn {
+    background-color: #d3d3d3;
+    border: 2px solid #999;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.side-btn:hover {
+    background-color: #c0c0c0;
+}
+
+/* Başlıklar ve Listeler */
+h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.project-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.featured-section {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.featured-section img {
+    width: 150px;
+    height: auto;
+}
+
+.warning-text {
+    color: #b30000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    width: 100%;
+}
