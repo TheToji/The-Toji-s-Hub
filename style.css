@@ -8,7 +8,7 @@ body {
     justify-content: center;
 }
 
-/* Ana İçerik Kutusu (Ortadaki Alan) */
+/* Ana İçerik Kutusu */
 .container {
     width: 600px;
     background: white;
@@ -16,24 +16,25 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Üst Menü Butonları */
+/* Üst Menü (Butonlar birbirine yakınlaştırıldı) */
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 30px;
 }
 
 .menu-btn {
     background-color: #d3d3d3;
     border: 2px solid #999;
-    padding: 10px 20px;
+    padding: 8px 18px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* BAŞARILI SABİT SAĞ MENÜ (İstediğin Özellik) */
+/* Sağ Sabit Menü */
 .side-menu {
     position: fixed;
     right: 20px;
@@ -80,6 +81,7 @@ h2 {
     object-fit: contain;
 }
 
+/* Öne Çıkan Büyük Alan (Tojima Anime) */
 .featured-section {
     display: flex;
     gap: 15px;
@@ -98,6 +100,7 @@ h2 {
     margin-top: 10px;
 }
 
+/* Alt Bilgi */
 footer {
     text-align: center;
     margin-top: 40px;
