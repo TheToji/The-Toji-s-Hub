@@ -1,106 +1,22 @@
-/* Genel Sayfa Ayarları */
-body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-/* Ana İçerik Kutusu */
-.container {
-    width: 600px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Üst Menü */
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.menu-btn {
-    background-color: #d3d3d3;
-    border: 2px solid #999;
-    padding: 8px 18px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Sağ Sabit Menü */
-.side-menu {
-    position: fixed;
-    right: 20px;
-    top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    z-index: 1000;
-}
-
-.side-btn {
-    background-color: #d3d3d3;
-    border: 2px solid #999;
-    padding: 10px 25px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
-
-.side-btn:hover {
-    background-color: #c0c0c0;
-}
-
-/* Başlıklar ve Listeler */
-h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-top: 30px;
-}
-
+/* Proje Satırı Genel Yapısı */
 .project-item {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
+    align-items: center; /* İkonu ve yazıyı dikeyde ortalar */
+    gap: 15px;           /* İkon ile yazı arasındaki mesafe */
+    margin-bottom: 20px; /* Satırlar arası alt boşluk */
 }
 
+/* Proje İkonları */
 .project-item img {
     width: 40px;
     height: 40px;
-    object-fit: contain;
+    object-fit: cover;
+    flex-shrink: 0;      /* Ekran küçülse bile ikonun bozulmasını engeller */
+    border-radius: 4px;  /* Hafif yumuşak köşeler (isteğe bağlı) */
 }
 
-/* Öne Çıkan Büyük Alan (Tojima Anime) */
-.featured-section {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.featured-section img {
-    width: 150px;
-    height: auto;
-}
-
-/* Alt Bilgi */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #555;
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
-    width: 100%;
+/* Proje Metinleri */
+.project-item p {
+    margin: 0;
+    line-height: 1.4;
 }
