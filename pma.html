@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TheToji's Hub - Pixel Of My Adventures</title>
+    <style>
+        /* Genel Sayfa Düzeni */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode Ayarları */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #1e1e1e;
+            border-color: #333;
+            color: #e0e0e0;
+        }
+        body.dark-mode .side-btn, 
+        body.dark-mode .page-btn,
+        body.dark-mode .settings-btn {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        body.dark-mode .side-btn:hover, 
+        body.dark-mode .page-btn:hover,
+        body.dark-mode .settings-btn:hover {
+            background-color: #3d3d3d;
+        }
+
+        /* Sol Üst Sabit Ayarlar Butonu */
+        .settings-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            z-index: 1000;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .settings-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+        
+        /* Sağ Sabit Menü */
+        .side-menu {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .side-btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .side-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+
+        /* Ana İçerik Kutusu */
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 15px;
+            background-color: #e0e0e0;
+            border: 1px solid #aaa;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sol Üst Ayarlar Butonu -->
+    <a href="settings.html" class="settings-btn" title="Settings">&#9881;</a>
+
+    <!-- Sağ Sabit Menü -->
+    <div class="side-menu">
+        <a href="index.html" class="side-btn">Main Page</a>
+        <a href="mods.html" class="side-btn">Mods</a>
+        <a href="resourcepacks.html" class="side-btn">Resource Packs</a>
+        <a href="games.html" class="side-btn" style="background-color: #dcdcdc;">Games</a>
+        <a href="fangames.html" class="side-btn">FanGames</a>
+        <a href="documents.html" class="side-btn">Documents</a>
+        <a href="sources.html" class="side-btn">Sources</a>
+        <a href="media.html" class="side-btn">Media</a>
+    </div>
+
+    <!-- Ana İçerik Kutusu -->
+    <div class="container">
+        <h2>Pixel Of My Adventures</h2>
+        <p><strong>Pixel Of My Adventures</strong> is a creative puzzle concept that blends charming pixel art aesthetics with brain-teasing, logic-based mechanics.</p>
+        <p>Players must solve unique environmental puzzles, explore pixelated worlds, and uncover hidden secrets as they progress through the adventure.</p>
+        
+        <a href="games.html" class="back-link">&larr; Back to Games</a>
+        
+        <footer>
+            Created By TheToji | Copyright (c) 2026
+        </footer>
+    </div>
+
+    <!-- Tema Kontrol Scripti -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>
