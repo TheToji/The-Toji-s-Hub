@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <title>TheToji's Hub - Games</title>
     <style>
+        /* Genel Sayfa Düzeni */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-        /* Dark Mode Ayarları (Bunu hemen altına ekliyorsun) */
+        /* Dark Mode Ayarları */
         body.dark-mode {
             background-color: #121212;
             color: #e0e0e0;
@@ -16,15 +25,13 @@
             color: #e0e0e0;
         }
         body.dark-mode .side-btn, 
-        body.dark-mode .home-btn, 
-        body.dark-mode .settings-btn {
+        body.dark-mode .page-btn {
             background-color: #2d2d2d;
             color: #e0e0e0;
             border-color: #444;
         }
         body.dark-mode .side-btn:hover, 
-        body.dark-mode .home-btn:hover, 
-        body.dark-mode .settings-btn:hover {
+        body.dark-mode .page-btn:hover {
             background-color: #3d3d3d;
         }
 
@@ -65,6 +72,7 @@
             padding: 30px;
             border: 1px solid #ddd;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         h2 {
@@ -128,23 +136,16 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
         }
-
-        <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-    </script>
-            
     </style>
 </head>
 <body>
 
     <!-- Sağ Sabit Menü -->
     <div class="side-menu">
-        <a href="index.html" class="side-btn" style="background-color: #dcdcdc;">Main Page</a>
+        <a href="index.html" class="side-btn">Main Page</a>
         <a href="mods.html" class="side-btn">Mods</a>
         <a href="resourcepacks.html" class="side-btn">Resource Packs</a>
-        <a href="games.html" class="side-btn">Games</a>
+        <a href="games.html" class="side-btn" style="background-color: #dcdcdc;">Games</a>
         <a href="fangames.html" class="side-btn">FanGames</a>
         <a href="documents.html" class="side-btn">Documents</a>
         <a href="sources.html" class="side-btn">Sources</a>
@@ -178,5 +179,11 @@
         </footer>
     </div>
 
+    <!-- Tema Kontrol Scripti (Doğru Yerde) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>
