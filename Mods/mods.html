@@ -26,6 +26,7 @@
         }
         body.dark-mode .side-btn, 
         body.dark-mode .page-btn,
+        body.dark-mode .menu-btn,
         body.dark-mode .settings-btn {
             background-color: #2d2d2d;
             color: #e0e0e0;
@@ -33,6 +34,7 @@
         }
         body.dark-mode .side-btn:hover, 
         body.dark-mode .page-btn:hover,
+        body.dark-mode .menu-btn:hover,
         body.dark-mode .settings-btn:hover {
             background-color: #3d3d3d;
         }
@@ -41,6 +43,31 @@
             background-color: #3d3d3d !important;
             border-color: #555 !important;
             color: #ffffff !important;
+        }
+
+        /* Sol Üst Sabit Ayarlar Butonu */
+        .settings-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            z-index: 1000;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .settings-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
         }
 
         /* Sağ Sabit Menü */
@@ -72,35 +99,44 @@
             background-color: #d0d0d0;
         }
 
-        /* Sol Üst Sabit Ayarlar Butonu */
-        .settings-btn {
-            position: fixed;
-            left: 20px;
-            top: 20px;
+        /* Üst Menü */
+        .menu {
             display: flex;
-            align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #e0e0e0;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            color: black;
-            font-size: 1.2rem;
+            gap: 15px;
+            margin: 40px auto 0 auto;
+            max-width: 700px;
+        }
+
+        .menu-btn {
+            padding: 10px 15px;
+            background-color: #dcdcdc;
+            border: 1px solid #aaa;
+            box-shadow: 2px 2px 0px #999;
+            cursor: pointer;
+            font-weight: bold;
             border-radius: 4px;
-            z-index: 1000;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            color: black;
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
-        .settings-btn:hover {
+        .menu-btn:hover {
             transform: scale(1.05);
             background-color: #d0d0d0;
         }
-        
+
+        .menu-btn:active {
+            box-shadow: none;
+            transform: translateY(2px);
+        }
+
         /* Ana İçerik Kutusu */
         .container {
             max-width: 700px;
-            margin: 40px auto;
+            margin: 20px auto 40px auto;
             background: #ffffff;
             padding: 30px;
             border: 1px solid #ddd;
@@ -188,11 +224,11 @@
     </div>
 
     <!-- Üst Menü -->
-        <div class="menu">
-            <button class="menu-btn">NEWS</button>
-            <button class="menu-btn">Social Links</button>
-            <button class="menu-btn">Products</button>
-        </div>
+    <div class="menu">
+        <button class="menu-btn">NEWS</button>
+        <button class="menu-btn">Social Links</button>
+        <button class="menu-btn">Products</button>
+    </div>
 
     <!-- Ana İçerik Kutusu -->
     <div class="container">
