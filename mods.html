@@ -10,6 +10,8 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Sağ Sabit Menü */
         .side-menu {
             position: fixed;
             right: 20px;
@@ -19,6 +21,7 @@
             gap: 10px;
             z-index: 1000;
         }
+
         .side-btn {
             display: block;
             text-align: center;
@@ -31,10 +34,13 @@
             border-radius: 4px;
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
+
         .side-btn:hover {
             transform: scale(1.05);
             background-color: #d0d0d0;
         }
+
+        /* Ana İçerik Kutusu */
         .container {
             max-width: 700px;
             margin: 40px auto;
@@ -43,18 +49,21 @@
             border: 1px solid #ddd;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
         }
+
         h2 {
             font-size: 1.2rem;
             border-bottom: 1px solid #ccc;
             padding-bottom: 8px;
             margin-bottom: 20px;
         }
+
         .project-item {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 20px;
         }
+
         .project-item img {
             width: 40px;
             height: 40px;
@@ -62,10 +71,12 @@
             flex-shrink: 0;
             border-radius: 4px;
         }
+
         .project-item p {
             margin: 0;
             line-height: 1.4;
         }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -74,18 +85,29 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
         }
+
+        .back-link {
+            color: #666;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sağ Sabit Menü (Sayfalar arası geçiş için linkler) -->
+    <!-- Sağ Sabit Menü -->
     <div class="side-menu">
+        <a href="index.html" class="side-btn" style="background-color: #dcdcdc;">Ana Sayfa</a>
         <a href="mods.html" class="side-btn">Mods</a>
+        <a href="mcrp.html" class="side-btn">Resource Packs</a>
         <a href="games.html" class="side-btn">Games</a>
         <a href="fangames.html" class="side-btn">FanGames</a>
         <a href="documents.html" class="side-btn">Documents</a>
         <a href="sources.html" class="side-btn">Sources</a>
-        <a href="links.html" class="side-btn">Links</a>
         <a href="media.html" class="side-btn">Media</a>
     </div>
 
@@ -95,18 +117,41 @@
 
         <!-- Mod 1 -->
         <div class="project-item">
-            <img src="TEoL.jpg" alt="Icon">
-            <p><strong>The End of Life:</strong> An immersive adventure mod that transforms the familiar atmosphere of Minecraft into a dark survival experience.</p>
+            <img src="Smart Searching.jpg" alt="Icon">
+            <p><strong>Smart Searching:</strong> Effortlessly search and highlight items across all chests and inventories with smart keyword matching.</p>
         </div>
 
-        <!-- Mod 2 -->
+                <!-- Mod 2 -->
+        <div class="project-item">
+            <img src="The Butcher.jpg" alt="Icon">
+            <p><strong>The Butcher:</strong> An atmospheric and terrifying horror mod that introduces custom-animated entities, suspense, and a brand-new survival nightmare.</p>
+        </div>
+        
+        <!-- Mod 3 -->
+        <div class="project-item">
+            <img src="TEoL.jpg" alt="Icon">
+            <p><strong>The End of Life:</strong> An immersive adventure mod that transforms the familiar atmosphere of Minecraft into a dark, mysterious, and unforgiving survival experience.</p>
+        </div>
+
+        <!-- Mod 4 -->
         <div class="project-item">
             <img src="TTSL.jpg" alt="Icon">
-            <p><strong>TTSL (TheToji's Special Library):</strong> Core dependency library required to power and stabilize all mods.</p>
+            <p><strong>TTSL (TheToji's Special Library):</strong> The core dependency library required to power, stabilize, and streamline all mods created by TheToji.</p>
         </div>
 
-        <footer>
-            <a href="index.html" style="color: #666; text-decoration: none;">← Ana Sayfaya Dön</a>
+                <!-- Mod 5 -->
+        <div class="project-item">
+            <img src="YOptimizer.jpg" alt="Icon">
+            <p><strong>YOptimizer:</strong> YOptimizer is a core performance optimization mod designed to boost FPS and reduce stuttering.</p>
+        </div>
+                <!-- Mod 6 -->
+        <div class="project-item">
+            <img src="YOptimizer Plus.jpg" alt="Icon">
+            <p><strong>YOptimizer +</strong>:</strong> YOptimizer Plus is an advanced performance optimization mod designed to maximize FPS and deliver ultimate smoothness.</p>
+        </div>
+        
+<footer>
+            Created By TheToji | Copyright (c) 2026
         </footer>
     </div>
 
