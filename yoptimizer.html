@@ -26,20 +26,25 @@
         }
         body.dark-mode .side-btn, 
         body.dark-mode .page-btn,
-        body.dark-mode .settings-btn {
+        body.dark-mode .settings-btn,
+        body.dark-mode .back-link {
             background-color: #2d2d2d;
             color: #e0e0e0;
             border-color: #444;
         }
         body.dark-mode .side-btn:hover, 
         body.dark-mode .page-btn:hover,
-        body.dark-mode .settings-btn:hover {
+        body.dark-mode .settings-btn:hover,
+        body.dark-mode .back-link:hover {
             background-color: #3d3d3d;
         }
 
-         body.dark-mode .side-btn.active {
+        body.dark-mode .side-btn.active {
+            background-color: #3d3d3d !important;
+            border-color: #555 !important;
+            color: #ffffff !important;
+        }
 
-background-color: #3d3d3d !important;
         /* Sol Üst Sabit Ayarlar Butonu */
         .settings-btn {
             position: fixed;
@@ -149,10 +154,10 @@ background-color: #3d3d3d !important;
     <!-- Sol Üst Ayarlar Butonu -->
     <a href="settings.html" class="settings-btn" title="Settings">&#9881;</a>
 
-    <!-- Sağ Sabit Menü -->
+    <!-- Sağ Sabit Menü (Mods vurgulanmış) -->
     <div class="side-menu">
         <a href="index.html" class="side-btn">Main Page</a>
-        <a href="mods.html" class="side-btn">Mods</a>
+        <a href="mods.html" class="side-btn" style="background-color: #dcdcdc;">Mods</a>
         <a href="resourcepacks.html" class="side-btn">Resource Packs</a>
         <a href="games.html" class="side-btn">Games</a>
         <a href="fangames.html" class="side-btn">FanGames</a>
