@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Üst Menü (Butonlar birbirine yakınlaştırıldı) */
+/* Üst Menü */
 .menu {
     display: flex;
     justify-content: center;
@@ -92,12 +92,6 @@ h2 {
 .featured-section img {
     width: 150px;
     height: auto;
-}
-
-.warning-text {
-    color: #b30000;
-    font-weight: bold;
-    margin-top: 10px;
 }
 
 /* Alt Bilgi */
