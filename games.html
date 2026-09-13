@@ -179,64 +179,11 @@
         </footer>
     </div>
 
-    <!-- Tema Kontrol Scripti (Doğru Yerde) -->
+    <!-- Tema Kontrol Scripti -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-mode');
         }
     </script>
-
-    <script>
-    // 1. Tema Kontrolü
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
-
-    // 2. Dil Sözlüğü
-    const translations = {
-        en: {
-            mainPage: "Main Page",
-            mods: "Mods",
-            resourcePacks: "Resource Packs",
-            games: "Games",
-            fangames: "FanGames",
-            documents: "Documents",
-            sources: "Sources",
-            media: "Media",
-            settingsTitle: "Settings",
-            themeLabel: "Theme:",
-            lightTheme: "Light",
-            darkTheme: "Dark",
-            langLabel: "Language:"
-        },
-        tr: {
-            mainPage: "Ana Sayfa",
-            mods: "Modlar",
-            resourcePacks: "Kaynak Paketleri",
-            games: "Oyunlar",
-            fangames: "Fan Yapımı Oyunlar",
-            documents: "Belgeler",
-            sources: "Kaynaklar",
-            media: "Medya",
-            settingsTitle: "Ayarlar",
-            themeLabel: "Tema:",
-            lightTheme: "Açık",
-            darkTheme: "Koyu",
-            langLabel: "Dil:"
-        }
-    };
-
-    // 3. Dili Uygula
-    const currentLang = localStorage.getItem('lang') || 'en';
-    if (currentLang === 'tr') {
-        document.querySelectorAll("[data-i18n]").forEach(element => {
-            const key = element.getAttribute("data-i18n");
-            if (translations.tr[key]) {
-                element.innerText = translations.tr[key];
-            }
-        });
-    }
-</script>
-    
 </body>
 </html>
