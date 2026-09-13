@@ -9,11 +9,12 @@ body {
 /* Sağ Sabit Menü */
 .side-menu {
     position: fixed;
-    right: 20px;
+    right: 10px;
     top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 1000; /* Diğer her şeyin üstünde kalmasını sağlar */
 }
 
 .side-btn {
