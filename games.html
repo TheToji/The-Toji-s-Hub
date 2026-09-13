@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>TheToji's Hub - Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sağ Sabit Menü */
+        .side-menu {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .side-btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .side-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+
+        /* Ana İçerik Kutusu */
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-item img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border-radius: 4px;
+        }
+
+        .project-item p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Detay Sayfasına Gidiş Butonu */
+        .page-btn {
+            padding: 6px 12px;
+            background-color: #e0e0e0;
+            border: 1px solid #aaa;
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 4px;
+            white-space: nowrap;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .page-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sağ Sabit Menü -->
+    <div class="side-menu">
+        <a href="index.html" class="side-btn" style="background-color: #dcdcdc;">Ana Sayfa</a>
+        <a href="mods.html" class="side-btn">Mods</a>
+        <a href="mcrp.html" class="side-btn">Resource Packs</a>
+        <a href="games.html" class="side-btn">Games</a>
+        <a href="fangames.html" class="side-btn">FanGames</a>
+        <a href="documents.html" class="side-btn">Documents</a>
+        <a href="sources.html" class="side-btn">Sources</a>
+        <a href="media.html" class="side-btn">Media</a>
+    </div>
+
+    <!-- Ana İçerik Kutusu -->
+    <div class="container">
+        <h2>My Games Collection</h2>
+
+        <!-- Oyun 1 -->
+        <div class="project-item">
+            <div class="project-left">
+                <img src="unknown.jpg" alt="Icon">
+                <p><strong>Adventure Of Boliy:</strong> A custom 2D lane-based game concept featuring unique mechanics.</p>
+            </div>
+            <a href="boliy.html" class="page-btn">Page</a>
+        </div>
+
+        <!-- Oyun 2 -->
+        <div class="project-item">
+            <div class="project-left">
+                <img src="unknown.jpg" alt="Icon">
+                <p><strong>Pixel Of My Adventures:</strong> A challenging 2D puzzle adventure project.</p>
+            </div>
+            <a href="pixeladventures.html" class="page-btn">Page</a>
+        </div>
+
+        <footer>
+            Created By TheToji | Copyright (c) 2026
+        </footer>
+    </div>
+
+</body>
+</html>
