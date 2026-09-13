@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <title>TheToji's Hub</title>
     <style>
+        /* Genel Sayfa Düzeni */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-        /* Dark Mode Ayarları (Bunu hemen altına ekliyorsun) */
+        /* Dark Mode Ayarları */
         body.dark-mode {
             background-color: #121212;
             color: #e0e0e0;
@@ -16,14 +25,14 @@
             color: #e0e0e0;
         }
         body.dark-mode .side-btn, 
-        body.dark-mode .home-btn, 
+        body.dark-mode .menu-btn, 
         body.dark-mode .settings-btn {
             background-color: #2d2d2d;
             color: #e0e0e0;
             border-color: #444;
         }
         body.dark-mode .side-btn:hover, 
-        body.dark-mode .home-btn:hover, 
+        body.dark-mode .menu-btn:hover, 
         body.dark-mode .settings-btn:hover {
             background-color: #3d3d3d;
         }
@@ -71,11 +80,15 @@
             cursor: pointer;
             font-weight: bold;
             border-radius: 4px;
-            transition: transform 0.2s ease, background-color 0.2s ease; /* Animasyon geçişi */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            color: black;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
         .side-btn:hover, .menu-btn:hover {
-            transform: scale(1.05); /* Üzerine gelince %5 büyür */
+            transform: scale(1.05);
             background-color: #d0d0d0;
         }
 
@@ -87,6 +100,7 @@
             padding: 30px;
             border: 1px solid #ddd;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         /* Üst Menü */
@@ -98,11 +112,8 @@
         }
 
         .menu-btn {
-            padding: 10px 20px;
             background-color: #dcdcdc;
             border: 1px solid #aaa;
-            font-weight: bold;
-            cursor: pointer;
             box-shadow: 2px 2px 0px #999;
         }
 
@@ -151,13 +162,6 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
         }
-
-        <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-    </script>
-            
     </style>
 </head>
 <body>
@@ -224,5 +228,11 @@
         </footer>
     </div>
 
+    <!-- Tema Kontrol Scripti (Doğru Yerde) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>
