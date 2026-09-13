@@ -7,11 +7,39 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            color: black;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Sol Üst Sabit Ana Sayfa / Geri Dönüş Butonu */
+        /* Dark Mode Sınıfları */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .container {
+            background: #1e1e1e;
+            border-color: #333;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .side-btn, 
+        body.dark-mode .home-btn, 
+        body.dark-mode select {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        body.dark-mode .side-btn:hover, 
+        body.dark-mode .home-btn:hover, 
+        body.dark-mode select:hover {
+            background-color: #3d3d3d;
+        }
+
+        /* Sol Üst Sabit Ana Sayfa Butonu */
         .home-btn {
             position: fixed;
             left: 20px;
@@ -73,6 +101,7 @@
             padding: 30px;
             border: 1px solid #ddd;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         h2 {
@@ -92,17 +121,13 @@
             margin-bottom: 8px;
         }
 
-        .setting-group select, .setting-group button {
+        .setting-group select {
             padding: 8px 12px;
             font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 4px;
             background-color: #f9f9f9;
             cursor: pointer;
-        }
-
-        .setting-group button:hover {
-            background-color: #e0e0e0;
         }
 
         footer {
@@ -139,7 +164,7 @@
         <div class="setting-group">
             <label for="languageSelect">Language / Dil:</label>
             <select id="languageSelect">
-                <option value="en" selected>English</option>
+                <option value="en">English</option>
                 <option value="tr">Türkçe</option>
             </select>
         </div>
@@ -148,8 +173,8 @@
         <div class="setting-group">
             <label for="themeSelect">Theme Preference:</label>
             <select id="themeSelect">
-                <option value="light" selected>Light Mode</option>
-                <option value="dark">Dark Mode (Coming Soon)</option>
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
             </select>
         </div>
 
@@ -158,5 +183,37 @@
         </footer>
     </div>
 
+    <script>
+        // Sayfa yüklendiğinde hafızadaki tercihleri inputlara yansıt ve temayı uygula
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedLang = localStorage.getItem('lang') || 'en';
+
+        const themeSelect = document.getElementById('themeSelect');
+        const langSelect = document.getElementById('languageSelect');
+
+        themeSelect.value = savedTheme;
+        langSelect.value = savedLang;
+
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Tema değiştiğinde hafızaya kaydet ve anında uygula
+        themeSelect.addEventListener('change', (e) => {
+            const selectedTheme = e.target.value;
+            localStorage.setItem('theme', selectedTheme);
+            if (selectedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
+
+        // Dil değiştiğinde hafızaya kaydet
+        langSelect.addEventListener('change', (e) => {
+            localStorage.setItem('lang', e.target.value);
+            // Dil altyapısı tam oturduğunda buraya metin çevirileri eklenecek
+        });
+    </script>
 </body>
 </html>
