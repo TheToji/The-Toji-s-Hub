@@ -170,7 +170,7 @@
     <!-- Sol Üst Ayarlar Butonu -->
     <a href="settings.html" class="settings-btn" title="Settings">&#9881;</a>
 
-    <!-- Sağ Sabit Menü -->
+    <!-- Sağ Sabit Menü (Mods sayfasında olduğumuz için Mods vurgulanıyor) -->
     <div class="side-menu">
         <a href="index.html" class="side-btn">Main Page</a>
         <a href="mods.html" class="side-btn" style="background-color: #dcdcdc;">Mods</a>
@@ -248,6 +248,7 @@
     <!-- Tema Kontrol Scripti -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-memory'); /* küçük şaka, dark-mode */
             document.body.classList.add('dark-mode');
         }
     </script>
