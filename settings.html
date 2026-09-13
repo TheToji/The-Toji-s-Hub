@@ -23,12 +23,43 @@
             color: #e0e0e0;
         }
         body.dark-mode .side-btn, 
+        body.dark-mode .home-btn,
         body.dark-mode select {
             background-color: #2d2d2d;
             color: #e0e0e0;
             border-color: #444;
         }
+        body.dark-mode .side-btn:hover,
+        body.dark-mode .home-btn:hover {
+            background-color: #3d3d3d;
+        }
 
+        /* Sol Üst Sabit Ana Sayfa Butonu */
+        .home-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            z-index: 1000;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .home-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+
+        /* Sağ Sabit Menü */
         .side-menu {
             position: fixed;
             right: 20px;
@@ -102,9 +133,11 @@
 </head>
 <body>
 
-    <!-- Sağ Sabit Menü -->
+    <!-- Sol Üst Ev Simgesi Ana Sayfa Butonu -->
+    <a href="index.html" class="home-btn" title="Main Page">&#8962;</a>
+
+    <!-- Sağ Sabit Menü (Main Page Hariç) -->
     <div class="side-menu">
-        <a href="index.html" class="side-btn">Main Page</a>
         <a href="mods.html" class="side-btn">Mods</a>
         <a href="resourcepacks.html" class="side-btn">Resource Packs</a>
         <a href="games.html" class="side-btn">Games</a>
