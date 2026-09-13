@@ -179,5 +179,47 @@
             document.body.classList.add('dark-mode');
         }
     </script>
+
+    <script>
+        // 1. Temayı uygula
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // 2. Dil sözlüğü (İngilizce ve Türkçe karşılıklar)
+        const translations = {
+            en: {
+                title: "My Minecraft & Other Mods",
+                backHome: "Main Page",
+                mods: "Mods",
+                resourcePacks: "Resource Packs",
+                games: "Games",
+                fangames: "FanGames",
+                documents: "Documents",
+                sources: "Sources",
+                media: "Media"
+            },
+            tr: {
+                title: "Minecraft ve Diğer Modlarım",
+                backHome: "Ana Sayfa",
+                mods: "Modlar",
+                resourcePacks: "Kaynak Paketleri",
+                games: "Oyunlar",
+                fangames: "Fan Yapımı Oyunlar",
+                documents: "Belgeler",
+                sources: "Kaynaklar",
+                media: "Medya"
+            }
+        };
+
+        // 3. Kaydedilen dili uygula
+        const currentLang = localStorage.getItem('lang') || 'en';
+        if (currentLang === 'tr') {
+            // Eğer Türkçe seçildiyse HTML içerisindeki metinleri tr sözlüğüne göre değiştir
+            document.querySelector("h2").innerText = translations.tr.title;
+            // İstediğin diğer elementleri de burada güncelleyebilirsin!
+        }
+    </script>
+    
 </body>
 </html>
