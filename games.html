@@ -111,6 +111,13 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
         }
+
+        <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+            
     </style>
 </head>
 <body>
