@@ -215,5 +215,40 @@
             // Dil altyapısı tam oturduğunda buraya metin çevirileri eklenecek
         });
     </script>
+
+    <script>
+        // Hafızadan tercihleri al (varsayılan: İngilizce ve Light Mode)
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedLang = localStorage.getItem('lang') || 'en';
+
+        const themeSelect = document.getElementById('themeSelect');
+        const langSelect = document.getElementById('languageSelect');
+
+        themeSelect.value = savedTheme;
+        langSelect.value = savedLang;
+
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Tema değiştiğinde kaydet ve uygula
+        themeSelect.addEventListener('change', (e) => {
+            const selectedTheme = e.target.value;
+            localStorage.setItem('theme', selectedTheme);
+            if (selectedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
+
+        // Dil değiştiğinde hafızaya kaydet ve sayfayı yenile (veya anlık değiştir)
+        langSelect.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+            localStorage.setItem('lang', selectedLang);
+            location.reload(); // Dil değişince sayfayı yenilemek metinlerin güncellenmesini sağlar
+        });
+    </script>
+    
 </body>
 </html>
