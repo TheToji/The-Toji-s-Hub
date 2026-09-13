@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TheToji's Hub - Games</title>
+    <title>TheToji's Hub - Mods</title>
     <style>
         /* Genel Sayfa Düzeni */
         body {
@@ -25,16 +25,43 @@
             color: #e0e0e0;
         }
         body.dark-mode .side-btn, 
-        body.dark-mode .page-btn {
+        body.dark-mode .page-btn,
+        body.dark-mode .settings-btn {
             background-color: #2d2d2d;
             color: #e0e0e0;
             border-color: #444;
         }
         body.dark-mode .side-btn:hover, 
-        body.dark-mode .page-btn:hover {
+        body.dark-mode .page-btn:hover,
+        body.dark-mode .settings-btn:hover {
             background-color: #3d3d3d;
         }
 
+        /* Sol Üst Sabit Ayarlar Butonu */
+        .settings-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            z-index: 1000;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .settings-btn:hover {
+            transform: scale(1.05);
+            background-color: #d0d0d0;
+        }
+        
         /* Sağ Sabit Menü */
         .side-menu {
             position: fixed;
@@ -140,12 +167,15 @@
 </head>
 <body>
 
+    <!-- Sol Üst Ayarlar Butonu -->
+    <a href="settings.html" class="settings-btn" title="Settings">&#9881;</a>
+
     <!-- Sağ Sabit Menü -->
     <div class="side-menu">
         <a href="index.html" class="side-btn">Main Page</a>
-        <a href="mods.html" class="side-btn">Mods</a>
+        <a href="mods.html" class="side-btn" style="background-color: #dcdcdc;">Mods</a>
         <a href="resourcepacks.html" class="side-btn">Resource Packs</a>
-        <a href="games.html" class="side-btn" style="background-color: #dcdcdc;">Games</a>
+        <a href="games.html" class="side-btn">Games</a>
         <a href="fangames.html" class="side-btn">FanGames</a>
         <a href="documents.html" class="side-btn">Documents</a>
         <a href="sources.html" class="side-btn">Sources</a>
@@ -154,26 +184,62 @@
 
     <!-- Ana İçerik Kutusu -->
     <div class="container">
-        <h2>My Games Collection</h2>
+        <h2>My Minecraft & Other Mods</h2>
 
-        <!-- Oyun 1 -->
+        <!-- Mod 1 -->
         <div class="project-item">
             <div class="project-left">
-                <img src="unknown.jpg" alt="No Icon">
-                <p><strong>Adventure Of Boliy:</strong> A custom 2D lane-based game concept featuring unique mechanics.</p>
+                <img src="Smart Searching.jpg" alt="Icon">
+                <p><strong>Smart Searching:</strong> Effortlessly search and highlight items across all chests and inventories with smart keyword matching.</p>
             </div>
-            <a href="boliy.html" class="page-btn">Page</a>
+            <a href="smartsearching.html" class="page-btn">Page</a>
         </div>
 
-        <!-- Oyun 2 -->
+        <!-- Mod 2 -->
         <div class="project-item">
             <div class="project-left">
-                <img src="unknown.jpg" alt="No Icon">
-                <p><strong>Pixel Of My Adventures:</strong> A challenging 2D puzzle adventure project.</p>
+                <img src="The Butcher.jpg" alt="Icon">
+                <p><strong>The Butcher:</strong> An atmospheric and terrifying horror mod that introduces custom-animated entities, suspense, and a brand-new survival nightmare.</p>
             </div>
-            <a href="pixeladventures.html" class="page-btn">Page</a>
+            <a href="thebutcher.html" class="page-btn">Page</a>
+        </div>
+        
+        <!-- Mod 3 -->
+        <div class="project-item">
+            <div class="project-left">
+                <img src="TEoL.jpg" alt="Icon">
+                <p><strong>The End of Life:</strong> An immersive adventure mod that transforms the familiar atmosphere of Minecraft into a dark, mysterious, and unforgiving survival experience.</p>
+            </div>
+            <a href="theendoflife.html" class="page-btn">Page</a>
         </div>
 
+        <!-- Mod 4 -->
+        <div class="project-item">
+            <div class="project-left">
+                <img src="TTSL.jpg" alt="Icon">
+                <p><strong>TTSL (TheToji's Special Library):</strong> The core dependency library required to power, stabilize, and streamline all mods created by TheToji.</p>
+            </div>
+            <a href="ttsl.html" class="page-btn">Page</a>
+        </div>
+
+        <!-- Mod 5 -->
+        <div class="project-item">
+            <div class="project-left">
+                <img src="YOptimizer.jpg" alt="Icon">
+                <p><strong>YOptimizer:</strong> YOptimizer is a core performance optimization mod designed to boost FPS and reduce stuttering.</p>
+            </div>
+            <a href="yoptimizer.html" class="page-btn">Page</a>
+        </div>
+
+        <!-- Mod 6 -->
+        <div class="project-item">
+            <div class="project-left">
+                <img src="YOptimizer Plus.jpg" alt="Icon">
+                <p><strong>YOptimizer Plus:</strong> YOptimizer Plus is an advanced performance optimization mod designed to maximize FPS and deliver ultimate smoothness.</p>
+            </div>
+            <a href="yoptimizerplus.html" class="page-btn">Page</a>
+        </div>
+        
         <footer>
             Created By TheToji | Copyright (c) 2026
         </footer>
