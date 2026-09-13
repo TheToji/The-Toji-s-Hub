@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <title>TheToji's Hub - Mods</title>
     <style>
+        /* Genel Sayfa Düzeni */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-        /* Dark Mode Ayarları (Bunu hemen altına ekliyorsun) */
+        /* Dark Mode Ayarları */
         body.dark-mode {
             background-color: #121212;
             color: #e0e0e0;
@@ -65,6 +74,7 @@
             padding: 30px;
             border: 1px solid #ddd;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         h2 {
@@ -102,31 +112,14 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
         }
-
-        .back-link {
-            color: #666;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-    </script>
-            
     </style>
 </head>
 <body>
 
     <!-- Sağ Sabit Menü -->
     <div class="side-menu">
-        <a href="index.html" class="side-btn" style="background-color: #dcdcdc;">Main Page</a>
-        <a href="mods.html" class="side-btn">Mods</a>
+        <a href="index.html" class="side-btn">Main Page</a>
+        <a href="mods.html" class="side-btn" style="background-color: #dcdcdc;">Mods</a>
         <a href="resourcepacks.html" class="side-btn">Resource Packs</a>
         <a href="games.html" class="side-btn">Games</a>
         <a href="fangames.html" class="side-btn">FanGames</a>
@@ -145,7 +138,7 @@
             <p><strong>Smart Searching:</strong> Effortlessly search and highlight items across all chests and inventories with smart keyword matching.</p>
         </div>
 
-                <!-- Mod 2 -->
+        <!-- Mod 2 -->
         <div class="project-item">
             <img src="The Butcher.jpg" alt="Icon">
             <p><strong>The Butcher:</strong> An atmospheric and terrifying horror mod that introduces custom-animated entities, suspense, and a brand-new survival nightmare.</p>
@@ -163,21 +156,28 @@
             <p><strong>TTSL (TheToji's Special Library):</strong> The core dependency library required to power, stabilize, and streamline all mods created by TheToji.</p>
         </div>
 
-                <!-- Mod 5 -->
+        <!-- Mod 5 -->
         <div class="project-item">
             <img src="YOptimizer.jpg" alt="Icon">
             <p><strong>YOptimizer:</strong> YOptimizer is a core performance optimization mod designed to boost FPS and reduce stuttering.</p>
         </div>
-                <!-- Mod 6 -->
+
+        <!-- Mod 6 -->
         <div class="project-item">
             <img src="YOptimizer Plus.jpg" alt="Icon">
-            <p><strong>YOptimizer +</strong>:</strong> YOptimizer Plus is an advanced performance optimization mod designed to maximize FPS and deliver ultimate smoothness.</p>
+            <p><strong>YOptimizer Plus:</strong> YOptimizer Plus is an advanced performance optimization mod designed to maximize FPS and deliver ultimate smoothness.</p>
         </div>
         
-<footer>
+        <footer>
             Created By TheToji | Copyright (c) 2026
         </footer>
     </div>
 
+    <!-- Script Doğru Yerde (body etiketinin hemen bitiminde) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>
