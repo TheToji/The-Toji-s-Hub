@@ -67,4 +67,31 @@
         <a href="index.html" class="back-btn">&larr; Back</a>
     </div>
 
-   
+<script>
+    // Sayfa yüklendiğinde localStorage'da kayıtlı tema var mı bak ve uygula
+    const savedTheme = localStorage.getItem('siteTheme');
+    if (savedTheme) {
+        document.body.className = savedTheme;
+        const themeSelect = document.getElementById('themeSelect');
+        if (themeSelect) {
+            themeSelect.value = savedTheme;
+        }
+    }
+
+    // Kullanıcı menüden yeni bir tema seçtiğinde çalışır
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) {
+        themeSelect.addEventListener('change', function() {
+            const selectedTheme = this.value;
+            
+            // Default seçildiyse sınıfı temizle, diğerlerinde ilgili sınıfı ekle
+            if (selectedTheme === 'default') {
+                document.body.className = '';
+                localStorage.removeItem('siteTheme');
+            } else {
+                document.body.className = selectedTheme;
+                localStorage.setItem('siteTheme', selectedTheme);
+            }
+        });
+    }
+</script>   
