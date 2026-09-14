@@ -1,0 +1,110 @@
+/* Temel Ayarlar ve Varsayılan (Default) Tema */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #000;
+    margin: 0;
+    padding: 40px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.settings-container {
+    max-width: 400px;
+    background: #e6e6e6;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+select {
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.settings-btn {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    background: #e6e6e6;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+.settings-btn:hover {
+    background: #d8d8d8;
+}
+
+/* --- Dark Tema --- */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-theme .settings-container {
+    background: #2a2a2a;
+}
+
+body.dark-theme a {
+    color: #3399ff;
+}
+
+body.dark-theme .settings-btn {
+    background: #2a2a2a;
+    color: #f0f0f0;
+}
+
+body.dark-theme .settings-btn:hover {
+    background: #3a3a3a;
+}
+
+/* --- Yüksek Kontrast (High Contrast) Tema --- */
+body.contrast-theme {
+    background-color: #000;
+    color: #fff;
+}
+
+body.contrast-theme .settings-container {
+    background: #000;
+    border: 2px solid #fff;
+}
+
+body.contrast-theme a {
+    color: #ffff00;
+    text-decoration: underline;
+}
+
+body.contrast-theme .settings-btn {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.contrast-theme .settings-btn:hover {
+    background: #fff;
+    color: #000;
+}
