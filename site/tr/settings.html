@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayarlar - TheToji's Hub 1.0</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #000;
+            margin: 0;
+            padding: 40px;
+        }
+        .settings-container {
+            max-width: 400px;
+            background: #e6e6e6;
+            padding: 30px;
+            border-radius: 4px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        select {
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="settings-container">
+        <h2>Diller / Languages</h2>
+        <ul>
+            <li><a href="../../settings.html">En - English</a></li>
+            <li><a href="settings.html">Tr - Türkçe</a> (Current)</li>
+            <li><a href="../es/settings.html">Es - Español</a></li>
+            <li><a href="../de/settings.html">De - Deutsch</a></li>
+            <li><a href="../fr/settings.html">Fr - Français</a></li>
+            <li><a href="../ru/settings.html">Ru - Russian</a></li>
+        </ul>
+
+        <h2>Tema / Theme</h2>
+        <select id="themeSelect">
+            <option value="default">Default</option>
+            <option value="dark">Dark</option>
+            <option value="contrast">High Contrast</option>
+        </select>
+    </div>
+
+</body>
+</html>
