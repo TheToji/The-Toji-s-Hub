@@ -2,7 +2,7 @@
 
 ARR License
 
-Copyright (c) 2026 Toji
+Copyright (c) 2026 TheToji
 
 All Rights Reserved
 
