@@ -33,3 +33,11 @@
 
 </body>
 </html>
+
+<script>
+    // Kayıtlı tema varsa index sayfasına da anında uygula
+    const savedTheme = localStorage.getItem('siteTheme');
+    if (savedTheme) {
+        document.body.className = savedTheme;
+    }
+</script>
