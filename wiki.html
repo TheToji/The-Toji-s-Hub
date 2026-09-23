@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Toji Hub - Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* --- Üst Navigasyon (Geri Dönüş ve Dil Seçenekleri) --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .back-btn {
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #ffffff;
+        }
+
+        .lang-selector {
+            background: #141414;
+            border: 1px solid #222;
+            color: #888;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .lang-selector:hover {
+            border-color: #444;
+            color: #fff;
+        }
+
+        /* --- Ana İçerik Konteyneri --- */
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-container h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Kategori Butonları Grid Yapısı --- */
+        .wiki-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: left;
+        }
+
+        .wiki-card {
+            background: #141414;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: block;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .wiki-card:hover {
+            border-color: #444;
+            transform: translateY(-2px);
+        }
+
+        .wiki-card h3 {
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .wiki-card p {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Bar: Geri Dönüş ve Dil Butonu -->
+    <div class="top-nav">
+        <a href="index.html" class="back-btn">&larr; Back to Home</a>
+        <button class="lang-selector" onclick="alert('Language: English (Default)')">EN / TR</button>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="content-container">
+        <h1>The Toji Hub - Wiki</h1>
+        <p class="subtitle">Explore categorized guides, project archives, logs, and system directories.</p>
+
+        <!-- Kategori Butonları Izgarası -->
+        <div class="wiki-grid">
+            <!-- Kategori 1: Games -->
+            <a href="games.html" class="wiki-card">
+                <h3>Games Hub</h3>
+                <p>Browse through browser-adapted minigames, puzzle ports, and arcade prototypes.</p>
+            </a>
+
+            <!-- Kategori 2: Projects -->
+            <a href="main.html" class="wiki-card">
+                <h3>Projects</h3>
+                <p>Check out active personal software development workflows, repositories, and scripts.</p>
+            </a>
+
+            <!-- Kategori 3: Error Logs -->
+            <a href="errors.html" class="wiki-card">
+                <h3>System Errors</h3>
+                <p>Registry of fallback error logs, debug states, and redirection handlers.</p>
+            </a>
+
+            <!-- Kategori 4: Documentation / Lore -->
+            <a href="error680.html" class="wiki-card">
+                <h3>Documentation</h3>
+                <p>Detailed technical specifications, version histories, and core stack notes.</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
