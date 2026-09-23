@@ -79,7 +79,7 @@
             margin-bottom: 40px;
         }
 
-        /* --- Kart Yapısı --- */
+        /* --- Kart Yapısı (Orijinal) --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -87,6 +87,19 @@
             text-align: left;
         }
 
+        /* --- Kart Yapısı (Özel/Ortalanmış - projects-grid2) --- */
+        .projects-grid2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .projects-grid2 .project-card {
+            width: 280px; /* Kartların sabit boyutu */
+        }
+        
         .project-card {
             background: #141414;
             border: 1px solid #222;
