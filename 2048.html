@@ -43,6 +43,48 @@
             color: #ffffff;
         }
 
+        /* --- Ana Düzen (Yan Kutular ve Oyun Alanı) --- */
+        .main-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        /* Yön Tuşları Bilgilendirme Kutuları */
+        .side-box {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 20px 15px;
+            text-align: center;
+            width: 130px;
+            color: #777;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .side-box strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .keys-display {
+            font-family: monospace;
+            background: #1f1f1f;
+            color: #ccc;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #333;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.85rem;
+        }
+
         .game-container {
             text-align: center;
             max-width: 400px;
@@ -86,7 +128,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .cell {
@@ -119,7 +161,18 @@
         .instructions {
             color: #777;
             font-size: 0.85rem;
-            line-height: 1.4;
+        }
+
+        /* Küçük ekranlar için düzen (Responsive) */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: column;
+            }
+            .side-box {
+                width: 100%;
+                max-width: 400px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -130,28 +183,42 @@
         <a href="games.html" class="back-btn">&larr; Back to Games</a>
     </div>
 
-    <div class="game-container">
-        <div class="header">
-            <h1>2048</h1>
-            <div class="score-box">
-                SCORE
-                <span id="score">0</span>
+    <div class="main-wrapper">
+        <!-- Sol Bilgilendirme Kutusu -->
+        <div class="side-box">
+            <strong>Controls</strong>
+            Use your keyboard keys to slide and merge the tiles.
+        </div>
+
+        <!-- Ana Oyun Alanı -->
+        <div class="game-container">
+            <div class="header">
+                <h1>2048</h1>
+                <div class="score-box">
+                    SCORE
+                    <span id="score">0</span>
+                </div>
             </div>
+
+            <div class="grid" id="grid">
+                <!-- 16 Hücre -->
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+
+            <p class="instructions">Reach the <strong>2048</strong> tile to win!</p>
         </div>
 
-        <div class="grid" id="grid">
-            <!-- 16 Hücre -->
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        <!-- Sağ Bilgilendirme Kutusu -->
+        <div class="side-box">
+            <strong>Arrow Keys</strong>
+            <span class="keys-display">&uarr; &darr; &larr; &rarr;</span>
         </div>
-
-        <p class="instructions">Use your <strong>Arrow Keys</strong> to merge numbers and reach the 2048 tile!</p>
     </div>
 
     <script>
-        // Basit 2048 Mantığı
         let board = [
             [0,0,0,0],
             [0,0,0,0],
@@ -222,13 +289,10 @@
         }
 
         document.addEventListener('keydown', e => {
-            let moved = false;
             let oldBoard = JSON.stringify(board);
 
             if (e.key === 'ArrowLeft') {
-                for (let r = 0; r < 4; r++) {
-                    board[r] = slide(board[r]);
-                }
+                for (let r = 0; r < 4; r++) { board[r] = slide(board[r]); }
             } else if (e.key === 'ArrowRight') {
                 for (let r = 0; r < 4; r++) {
                     board[r].reverse();
@@ -237,15 +301,11 @@
                 }
             } else if (e.key === 'ArrowUp') {
                 board = rotateLeft(board);
-                for (let r = 0; r < 4; r++) {
-                    board[r] = slide(board[r]);
-                }
+                for (let r = 0; r < 4; r++) { board[r] = slide(board[r]); }
                 board = rotateRight(board);
             } else if (e.key === 'ArrowDown') {
                 board = rotateRight(board);
-                for (let r = 0; r < 4; r++) {
-                    board[r] = slide(board[r]);
-                }
+                for (let r = 0; r < 4; r++) { board[r] = slide(board[r]); }
                 board = rotateLeft(board);
             }
 
