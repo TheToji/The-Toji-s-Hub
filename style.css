@@ -93,6 +93,22 @@ body.index-body {
     transition: all 0.3s ease;
 }
 
+/* --- Profil Görselleri Stili --- */
+.profile-images {
+    display: flex;
+    justify-content: center; /* Görselleri yan yana ortalar */
+    gap: 20px;               /* İki görsel arasındaki boşluk */
+    margin-bottom: 20px;     /* Başlıkla arasındaki boşluk */
+}
+
+.profile-img {
+    width: 100px;            /* Görsellerin genişliği (Senin için ideal boyut) */
+    height: 100px;           /* Görsellerin yüksekliği (Genişlikle aynı olmalı) */
+    border-radius: 50%;      /* Görselleri mükemmel yuvarlak yapar */
+    object-fit: cover;       /* Görselin kırpılmadan yuvarlak içine sığmasını sağlar */
+    border: 3px solid #333;  /* Görsellerin etrafına şık, koyu bir çerçeve */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Hafif bir gölge efekti */
+}
 .enter-btn:hover {
     background: #cccccc;
     transform: translateY(-2px);
