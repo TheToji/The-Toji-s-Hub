@@ -167,13 +167,14 @@ body.main-body {
     margin-bottom: 40px;
 }
 
-/* Kart Yapısı */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    text-align: left;
-}
+/* --- Kart Yapısı --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 280px)); /* Kartların maksimum genişliğini sabitliyoruz */
+            justify-content: center; /* Eksik kalan son satırdakileri ortalar! */
+            gap: 20px;
+            text-align: left;
+        }
 
 .project-card {
     background: #141414;
