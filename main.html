@@ -4,9 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Toji Hub - Main Page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Temel Sıfırlama & Karanlık Tema --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* --- Dil Seçenekleri (Sağ Üst) --- */
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .language-selector a {
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .language-selector a:hover {
+            color: #ffffff;
+        }
+
+        /* --- Geri Dönüş Butonu (Sol Üst) --- */
+        .back-section {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        .back-btn {
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #ffffff;
+        }
+
+        /* --- Ana İçerik Konteyneri --- */
+        .content-container {
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+            text-align: center;
+        }
+
+        .content-container h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* --- Kart Yapısı --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
+        }
+
+        .project-card {
+            background: #141414;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #444;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .project-card p {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #222;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background: #333;
+        }
+    </style>
 </head>
-<body class="main-body">
+<body>
 
     <!-- Dil Seçenekleri (Sağ Üst) -->
     <div class="language-selector">
