@@ -1,0 +1,99 @@
+/* --- Genel Ayarlar & Karanlık Tema --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.index-body {
+    background-color: #0d0d0d; /* Derin karanlık siyah */
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Dil Seçenekleri (Sağ Üst Köşe) --- */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.language-selector a {
+    color: #888;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.language-selector a:hover {
+    color: #ffffff;
+}
+
+/* --- Karşılama Alanı --- */
+.welcome-container {
+    text-align: center;
+}
+
+.welcome-container h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.welcome-container p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Sosyal Medya & Butonlar --- */
+.social-links {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+    border-color: #555;
+}
+
+/* --- Ana Sayfa Geçiş Butonu --- */
+.enter-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+    background: #cccccc;
+    transform: translateY(-2px);
+}
