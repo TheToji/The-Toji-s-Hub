@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Toji Hub - Block Blast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* --- Geri Dönüş Butonu (Sol Üst) --- */
+        .back-section {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        .back-btn {
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #ffffff;
+        }
+
+        .game-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .score-box {
+            background: #141414;
+            border: 1px solid #222;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .score-box span {
+            display: block;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* --- 8x8 Oyun Tahtası --- */
+        .grid {
+            background: #141414;
+            border: 2px solid #222;
+            border-radius: 6px;
+            padding: 8px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #1f1f1f;
+            border-radius: 3px;
+            transition: background 0.1s ease;
+        }
+
+        .cell.filled {
+            background: #7c3aed; /* Mor blok teması */
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        .instructions {
+            color: #777;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Geri Dönüş Butonu (Sol Üst) -->
+    <div class="back-section">
+        <a href="games.html" class="back-btn">&larr; Back to Games</a>
+    </div>
+
+    <div class="game-container">
+        <div class="header">
+            <h1>Block Blast</h1>
+            <div class="score-box">
+                SCORE
+                <span id="score">0</span>
+            </div>
+        </div>
+
+        <!-- 8x8 Grid Alanı -->
+        <div class="grid" id="grid">
+            <!-- JavaScript ile doldurulacak -->
+        </div>
+
+        <p class="instructions">Click cells to test the grid layout. Full puzzle mechanics coming soon in v0.1!</p>
+    </div>
+
+    <script>
+        const gridSize = 8;
+        const gridElement = document.getElementById('grid');
+        let board = Array(gridSize).fill().map(() => Array(gridSize).fill(0));
+        let score = 0;
+
+        function initGrid() {
+            gridElement.innerHTML = '';
+            for(let r=0; r<gridSize; r++) {
+                for(let c=0; c<gridSize; c++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell' + (board[r][c] === 1 ? ' filled' : '');
+                    cell.dataset.row = r;
+                    cell.dataset.col = c;
+                    
+                    // Test amaçlı tıklayınca kutu doldurma
+                    cell.addEventListener('click', () => {
+                        board[r][c] = board[r][c] === 0 ? 1 : 0;
+                        score += board[r][c] === 1 ? 10 : -10;
+                        updateGrid();
+                    });
+
+                    gridElement.appendChild(cell);
+                }
+            }
+        }
+
+        function updateGrid() {
+            const cells = gridElement.children;
+            let index = 0;
+            for(let r=0; r<gridSize; r++) {
+                for(let c=0; c<gridSize; c++) {
+                    cells[index].className = 'cell' + (board[r][c] === 1 ? ' filled' : '');
+                    index++;
+                }
+            }
+            document.getElementById('score').textContent = score;
+        }
+
+        initGrid();
+    </script>
+</body>
+</html>
