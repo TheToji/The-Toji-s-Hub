@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Toji Hub - System Errors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* --- Üst Navigasyon --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .back-btn {
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #ffffff;
+        }
+
+        /* --- Ana İçerik Konteyneri --- */
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-container h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Hata Listesi Izgarası --- */
+        .error-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .error-card {
+            background: #141414;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .error-card:hover {
+            border-color: #444;
+        }
+
+        .error-info h3 {
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            font-family: monospace;
+        }
+
+        .error-info p {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .error-code {
+            background: #1f1f1f;
+            color: #dc2626; /* Kırmızı hata vurgusu */
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Bar -->
+    <div class="top-nav">
+        <a href="wiki.html" class="back-btn">&larr; Back to Wiki</a>
+    </div>
+  <div class="top-nav">
+        <a href="index.html" class="back-btn">&larr; Back to Home</a>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="content-container">
+        <h1>System Error Logs</h1>
+        <p class="subtitle">Registry of fallback redirection states, debug codes, and missing path handlers.</p>
+
+        <!-- Hata Kartları -->
+        <div class="error-grid">
+            <!-- Hata 1: Error 680 -->
+            <div class="error-card">
+                <div class="error-info">
+                    <h3>Error 680: Fallback Handler</h3>
+                    <p>Triggered when attempting to access unlinked files or unavailable project assets.</p>
+                </div>
+                <div class="error-code">ERR_680</div>
+            </div>
+
+            <!-- Hata 2: 404 Not Found -->
+            <div class="error-card">
+                <div class="error-info">
+                    <h3>Error 404: Path Not Found</h3>
+                    <p>Standard HTTP status code registered when a requested directory does not exist.</p>
+                </div>
+                <div class="error-code">ERR_404</div>
+            </div>
+
+            <!-- Hata 3: Maintenance / Beta Lock -->
+            <div class="error-card">
+                <div class="error-info">
+                    <h3>Error 503: Beta Restricted</h3>
+                    <p>Encountered when accessing experimental v0.3 features without proper clearance.</p>
+                </div>
+                <div class="error-code">ERR_503</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
