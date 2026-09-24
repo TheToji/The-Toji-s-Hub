@@ -73,6 +73,7 @@ body.main-body {
 /* --- Karşılama Alanı (Index) --- */
 .welcome-container {
     text-align: center;
+    padding-bottom: 40px; /* Footer ile butonlar arasında güvenli bir tampon bölge oluşturur */
 }
 
 .profile-images {
