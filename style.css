@@ -17,9 +17,11 @@ body {
 body.index-body {
     height: 100vh;
     display: flex;
+    flex-direction: column; /* İçeriklerin üst üste durmasını sağlar */
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 /* --- Main (Ana) Sayfa Stilleri --- */
@@ -214,11 +216,20 @@ body.main-body {
     background: #333;
 }
 
-/* --- Sayfa İmzası --- */
+/* --- Sayfa İmzası (Genel) --- */
 footer {
     text-align: center;
     padding: 20px;
     color: #aaa;
     font-size: 14px;
     margin-top: 40px;
+}
+
+/* --- Sadece Index Sayfasındaki Footer'ı En Alta Sabitlemek İçin --- */
+body.index-body footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
 }
