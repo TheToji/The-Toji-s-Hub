@@ -1,0 +1,202 @@
+.site-govde {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.hosgeldin-konteyniri {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.profile-gorselleri {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-gorseli {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+.sosyal-linkler {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.buton {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 260px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 10px;
+}
+
+.imza {
+    text-align: center;
+    padding: 20px;
+    color: #8c8c8c;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+.orjinalweb-yazisi {
+    color: #8c8c8c;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.kirmizi-yazi {
+    color: #da1515;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dil-kutu {
+  display: inline-block;
+    padding: 12px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 160px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 10px; 
+    margin-right: 8px;
+    margin-top: 8px;
+
+}
+
+.dil-buton{
+  display: inline-block;
+    padding: 12px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 120px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 10px;
+
+}
+
+.wiki-grid-kapsayici {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.wiki-icerikler {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 10px;
+}
+
+.wiki-icerikler2 {
+    display: inline-block;
+    padding: 15px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 10px;
+    flex: 1 1 calc(25% - 20px);     
+    min-width: 250px;
+    max-width: 300px;
+    cursor: pointer;
+
+}
+
+.geri-butonu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 8px;
+    z-index: 1000;
+}
+
+.geri-butonu:hover {
+    background: #262626;
+    border-color: #555;
+}
+
+.hr {
+height: 10px;
+background: #141414;
+
+}
+
+.hata-hakkinda {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 260px;
+    height: 160px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 10px;
+    margin-left: 9px;
+    
+}
+
+#about-errors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
